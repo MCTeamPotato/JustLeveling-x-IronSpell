@@ -17,7 +17,7 @@ public class Jlis {
     public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
     public Jlis() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        //ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.configSpec);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.configSpec);
         PassivesRegister.load(bus);
         SkillsRegister.load(bus);
     }
