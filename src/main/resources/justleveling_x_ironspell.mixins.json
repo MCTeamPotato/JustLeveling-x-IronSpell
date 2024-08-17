@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.teampotato.justleveling_x_ironspell.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "justleveling_x_ironspell.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
