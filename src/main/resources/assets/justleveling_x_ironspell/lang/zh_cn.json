@@ -1,0 +1,11 @@
+{
+  "passive.justleveling_x_ironspell.mana_passive": "魔力泉源",
+  "passive.justleveling_x_ironspell.cooldown_passive": "快速启动",
+  "passive.justleveling_x_ironspell.cast_passive": "回声叠唱",
+  "skill.justleveling_x_ironspell.kill_mana_skill": "鲜血魔力",
+
+  "passive.justleveling_x_ironspell.mana_passive.description": "增加魔力上限",
+  "passive.justleveling_x_ironspell.cooldown_passive.description": "缩短冷却时间",
+  "passive.justleveling_x_ironspell.cast_passive.description": "缩短吟唱时间",
+  "skill.justleveling_x_ironspell.kill_mana_skill.description": "魔力低于百分之二十 / 四十 / 六十触发，给予即时魔力 2/3/4 药水效果，冷却200ticks"
+}

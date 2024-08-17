@@ -14,10 +14,10 @@ import org.slf4j.LoggerFactory;
 @Mod("justleveling_x_ironspell")
 public class Jlis {
     public static final String MODID = "justleveling_x_ironspell";
-    private static final Logger LOGGER = LoggerFactory.getLogger(MODID);
+    public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
     public Jlis() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.configSpec);
+        //ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.configSpec);
         PassivesRegister.load(bus);
         SkillsRegister.load(bus);
     }

@@ -14,7 +14,7 @@ public class SkillsRegister {
     public static final RegistryObject<Skill> KILL_MANA_SKILL = REGISTER.register("kill_mana_skill", () -> new Skill(
             new ResourceLocation(Jlis.MODID, "kill_mana_skill"),
             RegistryAptitudes.MAGIC.get(),
-            32,
+            10,
             new ResourceLocation(Jlis.MODID, "textures/skills/magic/kill_mana_skill.png")
     ));
 
