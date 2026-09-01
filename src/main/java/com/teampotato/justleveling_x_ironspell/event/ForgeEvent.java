@@ -1,6 +1,7 @@
 package com.teampotato.justleveling_x_ironspell.event;
 
 import com.teampotato.justleveling_x_ironspell.Jlis;
+import com.teampotato.justleveling_x_ironspell.aptitudes.PassivesRegister;
 import com.teampotato.justleveling_x_ironspell.aptitudes.SkillsRegister;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
@@ -8,12 +9,27 @@ import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.UUID;
+
 @Mod.EventBusSubscriber(modid = Jlis.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public final class ForgeEvent {
+    @SubscribeEvent
+    public static void playerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+        if (event.getEntity() instanceof ServerPlayer player) {
+            AttributeInstance mana = player.getAttribute(AttributeRegistry.MAX_MANA.get());
+            if (mana != null) {
+                // Older versions saved the cast passive's permanent modifier on maximum mana.
+                mana.removeModifier(UUID.fromString(PassivesRegister.CAST_PASSIVE.get().attributeUuid));
+            }
+        }
+    }
+
     @SubscribeEvent
     public static void killMob(LivingDeathEvent event) {
         if (event.getSource().getEntity() instanceof ServerPlayer serverPlayer && SkillsRegister.KILL_MANA_SKILL.get().isEnabled(serverPlayer)) {

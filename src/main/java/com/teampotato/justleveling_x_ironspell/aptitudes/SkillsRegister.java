@@ -1,8 +1,8 @@
 package com.teampotato.justleveling_x_ironspell.aptitudes;
 
-import com.dplayend.justleveling.registry.RegistryAptitudes;
-import com.dplayend.justleveling.registry.RegistrySkills;
-import com.dplayend.justleveling.registry.skills.Skill;
+import com.seniors.justlevelingfork.registry.RegistryAptitudes;
+import com.seniors.justlevelingfork.registry.RegistrySkills;
+import com.seniors.justlevelingfork.registry.skills.Skill;
 import com.teampotato.justleveling_x_ironspell.Jlis;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;

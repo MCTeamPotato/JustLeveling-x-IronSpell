@@ -1,8 +1,8 @@
 package com.teampotato.justleveling_x_ironspell.aptitudes;
 
-import com.dplayend.justleveling.registry.RegistryAptitudes;
-import com.dplayend.justleveling.registry.RegistryPassives;
-import com.dplayend.justleveling.registry.passive.Passive;
+import com.seniors.justlevelingfork.registry.RegistryAptitudes;
+import com.seniors.justlevelingfork.registry.RegistryPassives;
+import com.seniors.justlevelingfork.registry.passive.Passive;
 import com.teampotato.justleveling_x_ironspell.Jlis;
 import com.teampotato.justleveling_x_ironspell.config.Config;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
@@ -38,7 +38,7 @@ public class PassivesRegister {
             new ResourceLocation(Jlis.MODID, "cast_passive"),
             RegistryAptitudes.MAGIC.get(),
             new ResourceLocation(Jlis.MODID, "textures/skills/magic/cast_passive.png"),
-            AttributeRegistry.MAX_MANA.get(),
+            AttributeRegistry.CAST_TIME_REDUCTION.get(),
             "A713DF17-941C-EBBD-C7FD-338882B87398",
             Config.CAST_PASSIVE,
             3, 5, 7, 8, 9, 11, 12, 13, 15, 17, 18, 19, 21, 23, 24, 25, 26, 27, 29, 30
